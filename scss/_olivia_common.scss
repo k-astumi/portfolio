@@ -15,9 +15,11 @@ body {
     border-color: #64725b;
   }
 }
+
 #olivia {
   position: relative;
 }
+
 .mainvisual {
   background-color: #afbcaa;
   width: 100%;
@@ -33,7 +35,8 @@ body {
   }
 
 	h1, .textLink {
-		font-family: $fontFamily;
+    font-family: $fontFamily;
+    letter-spacing: 0.1em;
   }
 
 	h1 {
@@ -52,9 +55,20 @@ body {
   }
   
 }
+
+@media screen and (max-width: 970px) {
+  .mainvisual {
+    .mainvisual_text {
+      left: 12%;
+    }    
+  }
+}
+
 .title {
   font-family: $fontFamily;
+  letter-spacing: 0.1em;
 }
+
 .news {
   margin-top: 74px;
 
@@ -78,7 +92,7 @@ body {
     transition: .5s;
 
     &:hover {
-      opacity: 0.5;
+      opacity: 0.2;
     }
   }
   
@@ -100,6 +114,7 @@ body {
     margin-top: 8px;
   }
 }
+
 .recommend {
   .recommendSliderBox {
     display: flex;
@@ -108,7 +123,7 @@ body {
   }
 
   .recommendSlider {
-    width: 720px;
+    width: 380px;
 
     .title {
       font-size: 30px;
@@ -118,35 +133,33 @@ body {
   .recommendSliderNav {
     width: 12vw;
   }
-  .slider_mask {
 
-  }
-
-  .sliderInner {
-    display: flex;
-    align-items: center;
-    width: 720px;
+  .sliderCaption {
+    margin-left: -45px;
+    width: 340px;
+    position: relative;
   }
 
   .caption {
-    margin-left: 45px;
+    position: absolute;
+    left: 0;
+    top: 38%;
+    opacity: 0;
+    transition: .5s;
     text-align: left;
     line-height: 1.6;
 
     .title {
-      font-size: 30px;
+      font-size: 28px;
       margin-bottom: 29px;
+    }
+
+    &.current {
+      opacity: 1;
     }
   }
 }
 
-@media screen and (max-width: 970px) {
-  .mainvisual {
-    .mainvisual_text {
-      left: 12%;
-    }    
-  }
-}
 .slider {
 width:50%;
 height:100vh;

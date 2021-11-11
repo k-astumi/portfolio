@@ -21,7 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100&display=swap" rel="stylesheet">
 	<title>Olivia - Official page</title>
 </head>
 <body>
@@ -83,60 +83,45 @@
 				<p class="lead">Oliviaのおすすめジュエリー</p>
 				<div class="recommendSliderBox">
 					<ul class="recommendSliderNav">
-						<li class="slider_list"><p class="slider_mask"><img src="/works/images/olivia/recommend_img004.png" alt=""></p class="slider_mask"></li>					
-						<li class="slider_list"><p class="slider_mask"><img src="/works/images/olivia/recommend_img001.png" alt=""></p></li>
-						<li class="slider_list"><p class="slider_mask"><img src="/works/images/olivia/recommend_img002.png" alt=""></p></li>
-						<li class="slider_list"><p class="slider_mask"><img src="/works/images/olivia/recommend_img003.png" alt=""></p></li>
-
+						<li><img src="/works/images/olivia/recommend_img004.png" alt=""></li>					
+						<li><img src="/works/images/olivia/recommend_img001.png" alt=""></li>
+						<li><img src="/works/images/olivia/recommend_img002.png" alt=""></li>
+						<li><img src="/works/images/olivia/recommend_img003.png" alt=""></li>
 					</ul>
 					<ul class="recommendSlider">
-						<li class="slider_list">
-							<div class="sliderInner">
-								<p><img src="/works/images/olivia/recommend_img001.png" alt=""></p>
-								<div class="caption">
-									<p class="title">2022 Spring Collection</p>
-									<p>出会いの季節に相応しい<br>
-										すっきりとした美しいデザイン</p>
-								</div>
-							</div>
+						<li><img src="/works/images/olivia/recommend_img001.png" alt=""></li>
+						<li><img src="/works/images/olivia/recommend_img002.png" alt=""></li>
+						<li><img src="/works/images/olivia/recommend_img003.png" alt=""></li>
+						<li><img src="/works/images/olivia/recommend_img004.png" alt=""></li>
+					</ul>
+					<ul class="sliderCaption">
+						<li class="caption current">
+								<p class="title">2022 Spring Collection</p>
+								<p>出会いの季節に相応しい<br>
+									すっきりとした美しいデザイン</p>
+						</li class="caption">
+						<li class="caption">
+								<p class="title">Bridal</p>
+								<p>二人の想いを形にする<br>
+									最高のブライダルリング選び</p>
 						</li>
-						<li class="slider_list">
-							<div class="sliderInner">
-								<p><img src="/works/images/olivia/recommend_img002.png" alt=""></p>
-								<div class="caption">
-									<p class="title">Bridal</p>
-									<p>二人の想いを形にする<br>
-										最高のブライダルリング選び</p>
-								</div>
-							</div>
+						<li class="caption">
+								<p class="title">Standard Collection</p>
+								<p>世代を超えて愛される<br>
+									定番アイテムがラインナップ</p>
 						</li>
-						<li class="slider_list">
-							<div class="sliderInner">
-								<p><img src="/works/images/olivia/recommend_img003.png" alt=""></p>
-								<div class="caption">
-									<p class="title">Standard Collection</p>
-									<p>世代を超えて愛される<br>
-										定番アイテムがラインナップ</p>
-								</div>
-							</div>
-						</li>
-						<li class="slider_list">
-							<div class="sliderInner">
-								<p><img src="/works/images/olivia/recommend_img004.png" alt=""></p>
-								<div class="caption">
-									<p class="title">Color Stone</p>
-									<p>Oliviaこだわりの品質<br>
-										華やかなカラーストーン</p>
-								</div>
-							</div>
+						<li class="caption">
+								<p class="title">Color Stone</p>
+								<p>Oliviaこだわりの品質<br>
+									華やかなカラーストーン</p>
 						</li>
 					</ul>
 
 					<ul class="recommendSliderNav">
-						<li class="slider_list"><p class="slider_mask"><img src="/works/images/olivia/recommend_img002.png" alt=""></p></li>
-						<li class="slider_list"><p class="slider_mask"><img src="/works/images/olivia/recommend_img003.png" alt=""></p></li>
-						<li class="slider_list"><p class="slider_mask"><img src="/works/images/olivia/recommend_img004.png" alt=""></p></li>
-						<li class="slider_list"><p class="slider_mask"><img src="/works/images/olivia/recommend_img001.png" alt=""></p></li>					
+						<li><img src="/works/images/olivia/recommend_img002.png" alt=""></li>
+						<li><img src="/works/images/olivia/recommend_img003.png" alt=""></li>
+						<li><img src="/works/images/olivia/recommend_img004.png" alt=""></li>
+						<li><img src="/works/images/olivia/recommend_img001.png" alt=""></li>					
 					</ul>					
 				</div>
 			</div>
@@ -151,10 +136,16 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
 	$('.recommendSlider').slick({
-		asNavFor: ".recommendSliderNav"
+		asNavFor: ".recommendSliderNav",
+		draggable: false,
 	});
 	$('.recommendSliderNav').slick({
-		arrows: false
+		arrows: false,
+		draggable: false
+	});
+	$('.recommendSlider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		$('.caption').removeClass('current');
+		$('.caption').eq(currentSlide).addClass('current');
 	});
 </script>
 </body>

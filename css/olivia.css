@@ -32,6 +32,7 @@ body {
 }
 .mainvisual h1, .mainvisual .textLink {
   font-family: "Gayathri", sans-serif;
+  letter-spacing: 0.1em;
 }
 .mainvisual h1 {
   font-size: 68px;
@@ -46,8 +47,14 @@ body {
   font-size: 20px;
 }
 
+@media screen and (max-width: 970px) {
+  .mainvisual .mainvisual_text {
+    left: 12%;
+  }
+}
 .title {
   font-family: "Gayathri", sans-serif;
+  letter-spacing: 0.1em;
 }
 
 .news {
@@ -70,7 +77,7 @@ body {
   transition: 0.5s;
 }
 .news .newsLists_link:hover {
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .news .newsLists_date {
   color: #929b8f;
@@ -94,7 +101,7 @@ body {
   min-width: 1100px;
 }
 .recommend .recommendSlider {
-  width: 720px;
+  width: 380px;
 }
 .recommend .recommendSlider .title {
   font-size: 30px;
@@ -102,26 +109,28 @@ body {
 .recommend .recommendSliderNav {
   width: 12vw;
 }
-.recommend .sliderInner {
-  display: flex;
-  align-items: center;
-  width: 720px;
+.recommend .sliderCaption {
+  margin-left: -45px;
+  width: 340px;
+  position: relative;
 }
 .recommend .caption {
-  margin-left: 45px;
+  position: absolute;
+  left: 0;
+  top: 38%;
+  opacity: 0;
+  transition: 0.5s;
   text-align: left;
   line-height: 1.6;
 }
 .recommend .caption .title {
-  font-size: 30px;
+  font-size: 28px;
   margin-bottom: 29px;
 }
-
-@media screen and (max-width: 970px) {
-  .mainvisual .mainvisual_text {
-    left: 12%;
-  }
+.recommend .caption.current {
+  opacity: 1;
 }
+
 .slider {
   width: 50%;
   height: 100vh;
@@ -203,16 +212,18 @@ header .logo {
   margin-left: 3%;
   line-height: 1.9;
   font-family: "Gayathri", sans-serif;
+  letter-spacing: 0.1em;
   font-size: 42px;
 }
 header .headLinks {
   margin: 24px auto 0;
   font-family: "Gayathri", sans-serif;
+  letter-spacing: 0.1em;
   font-size: 20px;
   display: flex;
 }
 header .headLinks_link + .headLinks_link {
-  margin-left: 45px;
+  margin-left: 6vw;
 }
 header .headLinks_link a {
   display: inline-block;

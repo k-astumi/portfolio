@@ -10,19 +10,21 @@ header {
 		margin-left: 3%;
 		line-height: 1.9;
 		font-family: $fontFamily;
+		letter-spacing: 0.1em;
 		font-size: 42px;
 	}
 
 	.headLinks {
 		margin: 24px auto 0;
 		font-family: $fontFamily;
+		letter-spacing: 0.1em;
 		font-size: 20px;
 		display: flex;
 	}
 
 	.headLinks_link {
 		& + .headLinks_link {
-			margin-left: 45px;
+			margin-left: 6vw;
 		}
 
 		a {
