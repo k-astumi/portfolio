@@ -1,0 +1,62 @@
+header {
+	display: flex;
+	height: 70px;
+	position: absolute;
+	//background-color: rgba(255,255,255,0.5);
+	width: 100%;
+	z-index: 2;
+
+	.logo {
+		margin-left: 3%;
+		line-height: 1.9;
+		font-family: $fontFamily;
+		font-size: 42px;
+	}
+
+	.headLinks {
+		margin: 24px auto 0;
+		font-family: $fontFamily;
+		font-size: 20px;
+		display: flex;
+	}
+
+	.headLinks_link {
+		& + .headLinks_link {
+			margin-left: 45px;
+		}
+
+		a {
+			display: inline-block;
+			transition: .5s;
+		  }
+		  a:hover {
+			color: #fff;
+		  }
+	}
+
+	.hamburger {
+		margin: 32px 3% 0 0;
+		width: 29px;
+		height: 1px;
+		background-color: #333;
+		position: relative;
+
+		&::before,
+		&::after {
+			display: block;
+			content: "";
+			width: 29px;
+			height: 1px;
+			background-color: #333;
+			position: absolute;
+		}
+
+		&::before {
+			top: -10px;
+		}
+
+		&::after {
+			top: 10px;
+		}
+	}
+}

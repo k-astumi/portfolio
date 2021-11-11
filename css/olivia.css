@@ -1,0 +1,244 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+  color: #333;
+}
+
+.textLink {
+  font-size: 20px;
+  padding: 0 29px 10px 0;
+  border-bottom: 1px solid #d3dbd1;
+  transition: 0.5s;
+}
+.textLink:hover {
+  border-color: #64725b;
+}
+
+#olivia {
+  position: relative;
+}
+
+.mainvisual {
+  background-color: #afbcaa;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.mainvisual .mainvisual_text {
+  width: 300px;
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  z-index: 1;
+}
+.mainvisual h1, .mainvisual .textLink {
+  font-family: "Gayathri", sans-serif;
+}
+.mainvisual h1 {
+  font-size: 68px;
+}
+.mainvisual .mainText {
+  margin-top: 29px;
+  font-size: 14px;
+  line-height: 2;
+}
+.mainvisual .mainLink {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.title {
+  font-family: "Gayathri", sans-serif;
+}
+
+.news {
+  margin-top: 74px;
+}
+.news .title {
+  font-size: 26px;
+  text-align: center;
+}
+.news .newsLists {
+  width: 500px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+.news .newsLists_list {
+  margin-top: 29px;
+}
+.news .newsLists_link {
+  display: flex;
+  transition: 0.5s;
+}
+.news .newsLists_link:hover {
+  opacity: 0.5;
+}
+.news .newsLists_date {
+  color: #929b8f;
+  margin-right: 29px;
+}
+
+.contents {
+  margin-top: 103px;
+  text-align: center;
+}
+.contents .title {
+  font-size: 52px;
+}
+.contents .lead {
+  margin-top: 8px;
+}
+
+.recommend .recommendSliderBox {
+  display: flex;
+  justify-content: space-between;
+  min-width: 1100px;
+}
+.recommend .recommendSlider {
+  width: 720px;
+}
+.recommend .recommendSlider .title {
+  font-size: 30px;
+}
+.recommend .recommendSliderNav {
+  width: 12vw;
+}
+.recommend .sliderInner {
+  display: flex;
+  align-items: center;
+  width: 720px;
+}
+.recommend .caption {
+  margin-left: 45px;
+  text-align: left;
+  line-height: 1.6;
+}
+.recommend .caption .title {
+  font-size: 30px;
+  margin-bottom: 29px;
+}
+
+@media screen and (max-width: 970px) {
+  .mainvisual .mainvisual_text {
+    left: 12%;
+  }
+}
+.slider {
+  width: 50%;
+  height: 100vh;
+  margin-left: auto;
+  position: relative;
+  overflow: hidden;
+}
+.slider ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.slider ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-iteration-count: infinite;
+  animation-duration: 24s;
+  width: 100%;
+  height: 100%;
+  background: url(/works/images/olivia/mainvisual001.jpg) no-repeat left top/100% auto;
+  background-size: cover;
+}
+.slider ul li:nth-child(1) {
+  animation-name: slider;
+  animation-delay: -3s;
+}
+.slider ul li:nth-child(2) {
+  animation-name: slider;
+  animation-delay: 5s;
+  opacity: 0;
+  background: url(/works/images/olivia/mainvisual002.jpg);
+  background-size: cover;
+}
+.slider ul li:nth-child(3) {
+  animation-name: slider;
+  animation-delay: 13s;
+  opacity: 0;
+  background: url(/works/images/olivia/mainvisual003.jpg);
+  background-size: cover;
+}
+
+@keyframes slider {
+  0% {
+    opacity: 0;
+  }
+  20.83% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 1;
+  }
+  45.83% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mainvisual .slider {
+    width: 100%;
+  }
+  .mainvisual .mainvisual_text {
+    left: auto;
+    right: 8%;
+    color: #fff;
+    text-shadow: 1px 1px 106px rgba(0, 0, 0, 0.7);
+  }
+}
+header {
+  display: flex;
+  height: 70px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+header .logo {
+  margin-left: 3%;
+  line-height: 1.9;
+  font-family: "Gayathri", sans-serif;
+  font-size: 42px;
+}
+header .headLinks {
+  margin: 24px auto 0;
+  font-family: "Gayathri", sans-serif;
+  font-size: 20px;
+  display: flex;
+}
+header .headLinks_link + .headLinks_link {
+  margin-left: 45px;
+}
+header .headLinks_link a {
+  display: inline-block;
+  transition: 0.5s;
+}
+header .headLinks_link a:hover {
+  color: #fff;
+}
+header .hamburger {
+  margin: 32px 3% 0 0;
+  width: 29px;
+  height: 1px;
+  background-color: #333;
+  position: relative;
+}
+header .hamburger::before, header .hamburger::after {
+  display: block;
+  content: "";
+  width: 29px;
+  height: 1px;
+  background-color: #333;
+  position: absolute;
+}
+header .hamburger::before {
+  top: -10px;
+}
+header .hamburger::after {
+  top: 10px;
+}

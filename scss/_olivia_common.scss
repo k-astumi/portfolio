@@ -1,0 +1,226 @@
+$fontColor: #333;
+$fontFamily: 'Gayathri', sans-serif;
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+	color: $fontColor;
+}
+.textLink {
+  font-size: 20px;
+  padding: 0 29px 10px 0;
+  border-bottom: 1px solid #d3dbd1;
+  transition: .5s;
+
+  &:hover {
+    border-color: #64725b;
+  }
+}
+#olivia {
+  position: relative;
+}
+.mainvisual {
+  background-color: #afbcaa;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .mainvisual_text {
+    width: 300px;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    z-index: 1;
+  }
+
+	h1, .textLink {
+		font-family: $fontFamily;
+  }
+
+	h1 {
+		font-size: 68px;
+  }
+
+	.mainText {
+    margin-top: 29px;
+		font-size: 14px;
+		line-height: 2;
+  }
+
+	.mainLink {
+    margin-top: 50px;
+		font-size: 20px;
+  }
+  
+}
+.title {
+  font-family: $fontFamily;
+}
+.news {
+  margin-top: 74px;
+
+  .title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .newsLists {
+    width: 500px;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+
+  .newsLists_list {
+    margin-top: 29px;
+  }
+
+  .newsLists_link {
+    display: flex;
+    transition: .5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  
+  .newsLists_date {
+    color: #929b8f;
+    margin-right: 29px;
+  }
+}
+
+.contents {
+  margin-top: 103px;
+  text-align: center;
+
+  .title {
+    font-size: 52px;
+  }
+
+  .lead {
+    margin-top: 8px;
+  }
+}
+.recommend {
+  .recommendSliderBox {
+    display: flex;
+    justify-content: space-between;
+    min-width: 1100px;
+  }
+
+  .recommendSlider {
+    width: 720px;
+
+    .title {
+      font-size: 30px;
+    }
+  }
+
+  .recommendSliderNav {
+    width: 12vw;
+  }
+  .slider_mask {
+
+  }
+
+  .sliderInner {
+    display: flex;
+    align-items: center;
+    width: 720px;
+  }
+
+  .caption {
+    margin-left: 45px;
+    text-align: left;
+    line-height: 1.6;
+
+    .title {
+      font-size: 30px;
+      margin-bottom: 29px;
+    }
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .mainvisual {
+    .mainvisual_text {
+      left: 12%;
+    }    
+  }
+}
+.slider {
+width:50%;
+height:100vh;
+margin-left: auto;
+position:relative;
+overflow: hidden;
+
+  ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+
+    li{
+      position:absolute;
+      top:0;
+      left:0;
+      animation-iteration-count:infinite;
+      animation-duration:24s;
+      width: 100%;
+      height: 100%;
+      background: url(/works/images/olivia/mainvisual001.jpg) no-repeat left top / 100% auto;
+      background-size: cover;
+
+      &:nth-child(1){
+        animation-name:slider;
+        animation-delay:-3s;
+      }
+
+      &:nth-child(2){
+        animation-name:slider;
+        animation-delay:5s;
+        opacity:0;
+        background: url(/works/images/olivia/mainvisual002.jpg);
+        background-size: cover;
+      }
+      &:nth-child(3){
+        animation-name:slider;
+        animation-delay:13s;
+        opacity:0;
+        background: url(/works/images/olivia/mainvisual003.jpg);
+        background-size: cover;
+      }
+    }
+  }
+}
+
+@keyframes slider{
+0%{
+  opacity:0;
+}
+20.83%{
+  opacity:1;
+}
+33.33%{
+  opacity:1;
+}
+45.83%{
+  opacity:0;
+}
+100%{
+  opacity:0;
+}	
+}
+// スマホ・タブレット
+@media screen and (max-width: 768px) {
+  .mainvisual {
+    .slider {
+      width: 100%;
+    }
+    .mainvisual_text {
+      left: auto;
+      right: 8%;
+      color: #fff;
+      text-shadow: 1px 1px 106px rgba(0,0,0,0.7);
+    }
+  }
+}
