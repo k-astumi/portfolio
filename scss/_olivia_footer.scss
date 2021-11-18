@@ -1,0 +1,164 @@
+footer {
+	margin-top: 103px;
+	background-color: #afbcaa;
+
+	.footerInner {
+		width: 940px;
+		margin: 0 auto;
+		padding: 103px 0 45px;
+	}
+
+	.footerTitle {
+		font-size: 68px;
+		font-family: $fontFamily;
+		letter-spacing: 0.1em;
+	}
+
+	.footer01 {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.footer02 {
+		display: flex;
+		align-items: baseline;
+	}
+
+	.footerTitle {
+		flex-shrink: 1;
+		margin-right: 166px;
+	}
+
+	.footerMenu {
+		flex-grow: 1;
+		display: flex;
+		flex-wrap: wrap;
+
+		&_title {
+			font-size: 24px;
+			font-family: $fontFamily;
+			letter-spacing: 0.1em;
+		}
+
+		&_links {
+			margin-top: 20px;
+			line-height: 1.75;
+		}
+
+		&_link {
+			transition: .5s;
+		}
+
+		&_link:hover {
+			opacity: 0.5;
+		}
+
+		&_list + .footerMenu_list {
+			margin-left: 74px;
+		}
+
+		.footerMenu_list:nth-of-type(4n){
+			margin-left: 0;
+		}
+		.footerMenu_list:nth-of-type(5){
+			margin-left: 19px;
+		}
+
+		.footerMenu_list:nth-of-type(n+4){
+			margin-top: 74px;
+		}
+	}
+
+	.terms {
+		margin-top: 103px;
+		display: flex;
+		justify-content: center;
+		flex-grow: 1;
+
+		&_link {
+			position: relative;
+			font-size: 14px;
+
+			& + .terms_link {
+				margin-left: 60px;
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				width: 1px;
+				height: 1.2em;
+				background-color: #929b8f;
+				position: absolute;
+				right: -29px;
+				top: 0;
+			}
+
+			&:last-child::after{
+				content: none;
+			}
+		}
+	}
+
+	.license {
+		font-size: 12px;
+		color: #7e8474;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	footer {
+		.footerTitle {
+			display: none;
+		}
+
+		.footerMenu {
+			flex-direction: column;
+
+			&_links {
+				display: none;
+			}
+
+			.footerMenu_list:nth-of-type(n+4) {
+				margin-top: 0;
+			}
+
+			.footerMenu_list:nth-of-type(5) {
+				margin-left: 0;
+			}
+		}
+
+		.footerInner {
+			width: auto;
+		}
+
+		.footerMenu_list + .footerMenu_list {
+			margin-left: 0;
+		}
+
+		.footer02 {
+			flex-wrap: wrap;
+		}
+
+		.terms {
+			width: 100%;
+			font-size: 10px;
+
+			&_link {
+				& + .terms_link {
+					margin-left: 29px;
+				}
+				&::after {
+					content: none;
+				}
+			}
+		}
+
+		.license {
+			margin-top: 16px;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+}

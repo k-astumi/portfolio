@@ -2,9 +2,10 @@ $fontColor: #333;
 $fontFamily: 'Gayathri', sans-serif;
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Regular", "Yu Gothic", Verdana, Meiryo, sans-serif;
 	color: $fontColor;
 }
+
 .textLink {
   font-size: 20px;
   padding: 0 29px 10px 0;
@@ -16,8 +17,21 @@ body {
   }
 }
 
+.textLink--center {
+  padding: 0 29px 10px;
+}
+
 #olivia {
   position: relative;
+}
+
+h1, .textLink {
+  font-family: $fontFamily;
+  letter-spacing: 0.1em;
+}
+
+.spOnly {
+  display: none;
 }
 
 .mainvisual {
@@ -34,11 +48,6 @@ body {
     z-index: 1;
   }
 
-	h1, .textLink {
-    font-family: $fontFamily;
-    letter-spacing: 0.1em;
-  }
-
 	h1 {
 		font-size: 68px;
   }
@@ -46,7 +55,7 @@ body {
 	.mainText {
     margin-top: 29px;
 		font-size: 14px;
-		line-height: 2;
+		line-height: 2.5;
   }
 
 	.mainLink {
@@ -54,14 +63,6 @@ body {
 		font-size: 20px;
   }
   
-}
-
-@media screen and (max-width: 970px) {
-  .mainvisual {
-    .mainvisual_text {
-      left: 12%;
-    }    
-  }
 }
 
 .title {
@@ -77,17 +78,17 @@ body {
     text-align: center;
   }
 
-  .newsLists {
+  &Box {
     width: 500px;
     margin: 0 auto;
     font-size: 16px;
   }
 
-  .newsLists_list {
-    margin-top: 29px;
+  &Box_list {
+    margin-top: 45px;
   }
 
-  .newsLists_link {
+  &Box_link {
     display: flex;
     transition: .5s;
 
@@ -96,7 +97,7 @@ body {
     }
   }
   
-  .newsLists_date {
+  &Box_date {
     color: #929b8f;
     margin-right: 29px;
   }
@@ -111,6 +112,8 @@ body {
   }
 
   .lead {
+    font-size: 14px;
+    line-height: 2;
     margin-top: 8px;
   }
 }
@@ -223,8 +226,137 @@ overflow: hidden;
   opacity:0;
 }	
 }
-// スマホ・タブレット
+
+.collection {
+  .collectionLists {
+    margin: 45px 0 0 140px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+
+    &_list {
+      text-align: left;
+      line-height: 1.6;
+      box-sizing: border-box;
+      transition: .5s;
+
+      & + .collectionLists_list {
+        margin-left: 74px;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    .collectionLists_caption {
+      margin-top: 16px;
+    }
+
+    img {
+      width: 280px;
+    }
+  }
+
+  .contentsLink {
+    margin: 45px 0 0 140px;
+    text-align: left;
+  }
+}
+.service { 
+  &_lists {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+  &_list {
+    position: relative;
+
+    & + .service_list {
+        margin-left: 16px;
+    }
+  } 
+
+  &_img {
+    img {
+       max-width: 500px;
+       width: 100%;
+    }
+  }
+
+  &_text {
+    width: 15em;
+    position: absolute;
+    right: 3%;
+    top: 40%;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 14px;
+  }
+
+  &_font {
+    font-family: $fontFamily;
+    letter-spacing: 0.1em;
+    font-size: 24px;
+  }
+}
+
+.newsLists {
+  .contentsLink {
+    margin-top: 45px;
+  }
+
+  .newsBox {
+    width: 630px;
+    margin: 45px auto 0;
+  }
+
+  .newsBox_image {
+    img {
+      width: 136px;
+    }
+  }
+
+  .newsBox_text {
+    margin-left: 45px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.9;
+  }
+}
+
+.contact {
+  .contentsLink {
+    margin-top: 45px;
+  }
+}
+
+// タブレット
+@media screen and (max-width: 970px) {
+  .mainvisual {
+    .mainvisual_text {
+      left: 12%;
+    }    
+  }
+
+
+}
+// スマホ
 @media screen and (max-width: 768px) {
+  .spOnly {
+    display: block;
+  }
+  .contents {
+    .title {
+      font-size: 36px;
+    }
+    .lead {
+      margin: 0 16px;
+    }
+  }
   .mainvisual {
     .slider {
       width: 100%;
@@ -236,4 +368,98 @@ overflow: hidden;
       text-shadow: 1px 1px 106px rgba(0,0,0,0.7);
     }
   }
+  .news {
+    &Box {
+      width: auto;
+      margin: 0 16px;
+
+      &_link {
+        display: block;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .recommend {
+    .recommendSliderBox {
+      overflow: hidden;
+      min-width: auto;
+    }
+
+    .recommendSliderNav {
+      &:first-child {
+        display: none;
+      }
+    }
+
+    .recommendSlider {
+      img {
+        width: 70vw;
+        max-width: 380px;
+      }
+    }
+    .sliderCaption {
+      &--pc {
+        display: none;
+      }
+    }
+  }
+
+
+  .service {
+    &_lists {
+      flex-direction: column;
+    }
+
+    &_img {
+      img {
+        max-width: none;
+      }
+    }
+
+    &_list {
+      & + .service_list {
+          margin-left: 0;
+      }
+    }
+  }
+
+  .collection {
+    .collectionLists {
+      margin: 45px 0 0 45px;
+
+      img {
+        width: 200px;
+      }
+      &_list {
+        & + .collectionLists_list {
+          margin-left: 45px;
+        }
+      }
+    }
+  }
+
+  .newsLists {
+    .newsBox {
+      width: auto;
+      margin: 45px 16px 0;
+
+      &_image {
+        img {
+          width: 97px;
+        }
+      }
+
+      &_text {
+        margin-left: 29px;
+      }
+    }
+    .newsBox_link {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+
 }
