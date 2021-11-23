@@ -117,10 +117,11 @@ footer {
 
 			&_links {
 				display: none;
+				margin-bottom: 29px;
 			}
 
 			.footerMenu_list:nth-of-type(n+4) {
-				margin-top: 0;
+				margin-top: 16px;
 			}
 
 			.footerMenu_list:nth-of-type(5) {
@@ -130,10 +131,12 @@ footer {
 
 		.footerInner {
 			width: auto;
+			padding: 74px 10% 45px;
 		}
 
 		.footerMenu_list + .footerMenu_list {
 			margin-left: 0;
+			margin-top: 16px;
 		}
 
 		.footer02 {

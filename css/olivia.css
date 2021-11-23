@@ -313,6 +313,9 @@ h1, .textLink {
     display: block;
     line-height: 1.8;
   }
+  .newsBox_list {
+    margin-top: 29px;
+  }
 
   .recommend .recommendSliderBox {
     overflow: hidden;
@@ -348,6 +351,9 @@ h1, .textLink {
   .collection .collectionLists_list + .collectionLists_list {
     margin-left: 45px;
   }
+  .collection .contentsLink {
+    margin: 45px 0 0 45px;
+  }
 
   .newsLists .newsBox {
     width: auto;
@@ -363,10 +369,18 @@ h1, .textLink {
     display: flex;
   }
 }
+body.fixed {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
 header {
   display: flex;
   height: 70px;
   position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   z-index: 2;
 }
@@ -395,13 +409,18 @@ header .headLinks_link a:hover {
   color: #fff;
 }
 header .hamburger {
-  margin: 32px 3% 0 0;
+  margin: 24px 3% 0 0;
+  width: 29px;
+  height: 29px;
+  cursor: pointer;
+}
+header .hamburger_line {
   width: 29px;
   height: 1px;
   background-color: #333;
   position: relative;
 }
-header .hamburger::before, header .hamburger::after {
+header .hamburger_line::before, header .hamburger_line::after {
   display: block;
   content: "";
   width: 29px;
@@ -409,16 +428,239 @@ header .hamburger::before, header .hamburger::after {
   background-color: #333;
   position: absolute;
 }
-header .hamburger::before {
-  top: -10px;
-}
-header .hamburger::after {
+header .hamburger_line::before {
   top: 10px;
+}
+header .hamburger_line::after {
+  top: 20px;
+}
+
+.stickyHeader {
+  position: fixed;
+  top: -70px;
+  transition: 0.5s;
+  z-index: 2;
+  width: 100%;
+}
+.stickyHeader.active {
+  top: 0;
+}
+.stickyHeader_inner {
+  display: flex;
+  height: 70px;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.stickyHeader_inner .logo {
+  margin-left: 3%;
+  line-height: 1.9;
+  font-family: "Gayathri", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 42px;
+}
+.stickyHeader_inner .headLinks {
+  margin: 24px auto 0;
+  font-family: "Gayathri", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 20px;
+  display: flex;
+}
+.stickyHeader_inner .headLinks_link + .headLinks_link {
+  margin-left: 6vw;
+}
+.stickyHeader_inner .headLinks_link a {
+  display: inline-block;
+  transition: 0.5s;
+}
+.stickyHeader_inner .headLinks_link a:hover {
+  opacity: 0.5;
+}
+.stickyHeader_inner .hamburger {
+  margin: 24px 3% 0 0;
+  width: 29px;
+  height: 29px;
+  cursor: pointer;
+}
+.stickyHeader_inner .hamburger_line {
+  width: 29px;
+  height: 1px;
+  background-color: #333;
+  position: relative;
+}
+.stickyHeader_inner .hamburger_line::before, .stickyHeader_inner .hamburger_line::after {
+  display: block;
+  content: "";
+  width: 29px;
+  height: 1px;
+  background-color: #333;
+  position: absolute;
+}
+.stickyHeader_inner .hamburger_line::before {
+  top: 10px;
+}
+.stickyHeader_inner .hamburger_line::after {
+  top: 20px;
+}
+
+.menuExpand {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ddd6d1;
+  z-index: 3;
+}
+.menuExpand_inner {
+  width: 940px;
+  margin: 25vh auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+.menuExpand .menuTitle {
+  font-size: 68px;
+  font-family: "Gayathri", sans-serif;
+  letter-spacing: 0.1em;
+  margin-right: 10vw;
+}
+.menuExpand .menu {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.menuExpand .menu_title {
+  font-size: 24px;
+  font-family: "Gayathri", sans-serif;
+  letter-spacing: 0.1em;
+}
+.menuExpand .menu_links {
+  margin-top: 20px;
+  line-height: 1.75;
+}
+.menuExpand .menu_link {
+  transition: 0.5s;
+}
+.menuExpand .menu_link:hover {
+  opacity: 0.5;
+}
+.menuExpand .menu_list + .menu_list {
+  margin-left: 74px;
+}
+.menuExpand .menu .menu_list:nth-of-type(4n) {
+  margin-left: 0;
+}
+.menuExpand .menu .menu_list:nth-of-type(5) {
+  margin-left: 19px;
+}
+.menuExpand .menu .menu_list:nth-of-type(n+4) {
+  margin-top: 74px;
+}
+.menuExpand .closeButton {
+  position: absolute;
+  right: 36px;
+  top: 16px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.menuExpand .closeButton_line {
+  position: relative;
+  left: 0;
+  top: 20px;
+  width: 30px;
+  height: 1px;
+  background-color: #333;
+  transform: rotate(45deg);
+}
+.menuExpand .closeButton_line::after {
+  display: block;
+  content: "";
+  width: 30px;
+  height: 1px;
+  background-color: #333;
+  transform: rotate(-90deg);
 }
 
 @media screen and (max-width: 768px) {
   header .headLinks {
     display: none;
+  }
+  header .logo {
+    font-size: 22px;
+    margin-top: 16px;
+  }
+  header .hamburger {
+    margin: 20px 3% 0 auto;
+  }
+  header .hamburger_line {
+    width: 25px;
+  }
+  header .hamburger_line::before {
+    width: 25px;
+    top: 9px;
+  }
+  header .hamburger_line::after {
+    width: 25px;
+    top: 18px;
+  }
+
+  .stickyHeader .headLinks {
+    display: none;
+  }
+  .stickyHeader .logo {
+    font-size: 22px;
+    margin-top: 16px;
+  }
+  .stickyHeader .hamburger {
+    margin: 20px 3% 0 auto;
+  }
+  .stickyHeader .hamburger_line {
+    width: 25px;
+  }
+  .stickyHeader .hamburger_line::before {
+    width: 25px;
+    top: 9px;
+  }
+  .stickyHeader .hamburger_line::after {
+    width: 25px;
+    top: 18px;
+  }
+
+  .menuExpand .closeButton {
+    right: 24px;
+    top: 16px;
+  }
+}
+@media screen and (max-width: 940px) {
+  .menuExpand {
+    overflow: scroll;
+  }
+  .menuExpand_inner {
+    width: auto;
+    margin-top: 10vh;
+    flex-direction: column;
+  }
+  .menuExpand .menuTitle {
+    margin: 0 10% 0;
+    font-size: 48px;
+  }
+  .menuExpand .menu {
+    margin: 0 10% 0;
+    flex-direction: column;
+  }
+  .menuExpand .menu .menu_list + .menu_list {
+    margin-left: 0;
+  }
+  .menuExpand .menu .menu_list:nth-of-type(n+4) {
+    margin-top: 16px;
+  }
+  .menuExpand .menu_links {
+    display: none;
+    margin-bottom: 29px;
+  }
+  .menuExpand .menu_list {
+    margin-top: 16px;
   }
 }
 footer {
@@ -519,18 +761,21 @@ footer .license {
   }
   footer .footerMenu_links {
     display: none;
+    margin-bottom: 29px;
   }
   footer .footerMenu .footerMenu_list:nth-of-type(n+4) {
-    margin-top: 0;
+    margin-top: 16px;
   }
   footer .footerMenu .footerMenu_list:nth-of-type(5) {
     margin-left: 0;
   }
   footer .footerInner {
     width: auto;
+    padding: 74px 10% 45px;
   }
   footer .footerMenu_list + .footerMenu_list {
     margin-left: 0;
+    margin-top: 16px;
   }
   footer .footer02 {
     flex-wrap: wrap;
