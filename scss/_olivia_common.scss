@@ -1,9 +1,23 @@
 $fontColor: #333;
 $fontFamily: 'Gayathri', sans-serif;
+$effect_move: 20;
+$effect_time: 800;
 
 body {
 	font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Regular", "Yu Gothic", Verdana, Meiryo, sans-serif;
-	color: $fontColor;
+  color: $fontColor;
+  letter-spacing: .1em;
+}
+
+.scrollFade {
+  opacity: 0;
+  transition: $effect_time + ms;
+  transform: translateY($effect_move + px);
+
+  &.done {
+    opacity : 1;
+    transform : translate(0, 0);
+  }
 }
 
 .textLink {
@@ -41,7 +55,7 @@ h1, .textLink {
   position: relative;
 
   .mainvisual_text {
-    width: 300px;
+    width: 20em;
     position: absolute;
     left: 20%;
     top: 30%;
@@ -86,6 +100,7 @@ h1, .textLink {
 
   &Box_list {
     margin-top: 45px;
+    line-height: 2;
   }
 
   &Box_link {
@@ -104,7 +119,7 @@ h1, .textLink {
 }
 
 .contents {
-  margin-top: 103px;
+  margin-top: 160px;
   text-align: center;
 
   .title {
@@ -123,10 +138,12 @@ h1, .textLink {
     display: flex;
     justify-content: space-between;
     min-width: 1100px;
+    margin-top: 29px;
   }
 
   .recommendSlider {
     width: 380px;
+    margin-top: 103px;
 
     .title {
       font-size: 30px;
@@ -137,29 +154,58 @@ h1, .textLink {
     width: 12vw;
   }
 
-  .sliderCaption {
-    margin-left: -45px;
-    width: 340px;
-    position: relative;
+  .recommendSliderNav:nth-of-type(3) {
+    margin-top: 206px;
   }
 
-  .caption {
+  .captionWrap {
+    position: relative;
+    margin-left: -45px;
+
+    .caption {
+      position: absolute;
+      left: 0;
+      top: 38%;
+      opacity: 0;
+      transition: .5s;
+      text-align: left;
+      line-height: 1.6;
+
+      .title {
+        font-size: 28px;
+        margin-bottom: 29px;
+      }
+
+      &.current {
+        opacity: 1;
+      }
+    }
+    .sliderCaption {
+      width: 340px;
+    }
+  }
+
+  .captionWrapSp {
+    display: none;
+  }
+
+
+  .slideButtons {
     position: absolute;
-    left: 0;
-    top: 38%;
-    opacity: 0;
+    bottom: 103px;
+    display: flex;
+  }
+
+  .slideButton {
     transition: .5s;
-    text-align: left;
-    line-height: 1.6;
 
-    .title {
-      font-size: 28px;
-      margin-bottom: 29px;
+    &:hover {
+      opacity: 0.6;
     }
+  }
 
-    &.current {
-      opacity: 1;
-    }
+  .slideButton + .slideButton {
+    margin-left: 16px;
   }
 }
 
@@ -272,6 +318,8 @@ overflow: hidden;
 
   &_list {
     position: relative;
+    overflow: hidden;
+    transition: 1s;
 
     & + .service_list {
         margin-left: 16px;
@@ -279,10 +327,15 @@ overflow: hidden;
   } 
 
   &_img {
+    transition: 2s;
     img {
        max-width: 500px;
        width: 100%;
     }
+  }
+
+  &_list:hover .service_img {
+    transform: scale(1.1);
   }
 
   &_text {
@@ -299,6 +352,63 @@ overflow: hidden;
     font-family: $fontFamily;
     letter-spacing: 0.1em;
     font-size: 24px;
+  }
+}
+
+.concept {
+  padding: 103px 0;
+  background: url(/works/images/olivia/concept_img001.jpg) no-repeat center center / 100vw auto;
+  background-attachment: fixed;
+
+  .title {
+    color: #fff;
+  }
+
+  .lead {
+    color: #fff;
+  }
+
+  .conceptLinks {
+    background-color: #fff;
+    width: 660px;
+    margin: 103px auto 0;
+    padding: 45px 60px 55px;
+    display: flex;
+    justify-content: space-between;
+
+    &_link {
+      display: block;
+
+      &:hover .textLink {
+        border-color: #64725b;
+      }
+    }
+
+    &_item {
+      margin-right: 60px;
+    }
+
+    &_title {
+      font-family: $fontFamily;
+      letter-spacing: 0.1em;
+      font-size: 24px;
+      text-align: left;
+    }
+
+    &_text {
+      margin-top: 16px;
+      text-align: left;
+      line-height: 2;
+
+      &--sp {
+        display: none;
+      }
+    }
+
+    .contentsLink {
+      margin-top: 29px;
+      text-align: left;
+    }
   }
 }
 
@@ -368,6 +478,17 @@ overflow: hidden;
       text-shadow: 1px 1px 106px rgba(0,0,0,0.7);
     }
   }
+
+  .menuExpand {
+    .menu {
+      .menu_title {
+        pointer-events: all;
+        cursor: pointer;
+      }
+    }
+
+  }
+
   .news {
     &Box {
       width: auto;
@@ -388,27 +509,75 @@ overflow: hidden;
     .recommendSliderBox {
       overflow: hidden;
       min-width: auto;
+      margin-left: 16px;
     }
 
     .recommendSliderNav {
+      width: 17vw;
+
       &:first-child {
         display: none;
       }
+
+      img {
+        width: 70vw;
+      }
+    }
+
+    .recommendSliderNav:nth-of-type(3) {
+      margin-top: 45px;
     }
 
     .recommendSlider {
+      width: 70vw;
+      margin-top: 0;
+
       img {
         width: 70vw;
-        max-width: 380px;
       }
     }
-    .sliderCaption {
-      &--pc {
-        display: none;
+
+    .captionWrap {
+      display: none;
+    }
+
+    .captionWrapSp {
+      display: block;
+      margin: 0 0 0 16px;
+
+      .buttons {
+        display: flex;
+
+        .button + .button {
+          margin-left: 16px;
+        }
+      }
+
+      .sliderCaption {
+        position: relative;
+        height: 160px;
+      }
+
+      .caption {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 29px;
+        transition: .5s;
+        opacity: 0;
+        text-align: left;
+
+        .title {
+          font-size: 28px;
+          margin-bottom: 29px;
+        }
+      }
+
+      .caption.current {
+        opacity: 1;
       }
     }
   }
-
 
   .service {
     &_lists {
@@ -425,6 +594,14 @@ overflow: hidden;
       & + .service_list {
           margin-left: 0;
       }
+    }
+
+    &_text {
+      width: 12em;
+    }
+
+    &_font {
+      font-size: 20px;
     }
   }
 
@@ -447,6 +624,41 @@ overflow: hidden;
     }
   }
 
+  .concept {
+    background-size: 220% auto;
+    background-attachment: unset;
+    position: relative;
+
+    .conceptLinks {
+      display: block;
+      width: auto;
+      margin: 45px 16px 0;
+      padding: 0;
+      background-color: transparent;
+
+      &_item {
+        margin-top: 5px;
+        margin-right: 0;
+        background: url(/works/images/olivia/concept_ic001.png) #fff no-repeat right 16px center / 9px auto;
+      }
+
+      &_link {
+        padding: 29px;
+      }
+
+      &_text {
+        display: none;
+        &--sp {
+          display: block;
+        }
+      }
+
+      .contentsLink {
+        display: none;
+      }
+    }
+  }
+
   .newsLists {
     .newsBox {
       width: auto;
@@ -466,8 +678,4 @@ overflow: hidden;
       display: flex;
     }
   }
-}
-
-@media screen and (max-width: 450px) {
-
 }

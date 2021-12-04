@@ -192,6 +192,7 @@ header {
 			font-size: 24px;
 			font-family: $fontFamily;
 			letter-spacing: 0.1em;
+			pointer-events: none;
 		}
 
 		&_links {
@@ -331,6 +332,7 @@ header {
 		.menuTitle {
 			margin: 0 10% 0;
 			font-size: 48px;
+			pointer-events: all;
 		}
 
 		.menu {

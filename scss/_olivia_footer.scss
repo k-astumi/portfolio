@@ -26,7 +26,7 @@ footer {
 
 	.footerTitle {
 		flex-shrink: 1;
-		margin-right: 166px;
+		margin-right: 148px;
 	}
 
 	.footerMenu {
@@ -38,6 +38,7 @@ footer {
 			font-size: 24px;
 			font-family: $fontFamily;
 			letter-spacing: 0.1em;
+			pointer-events: none;
 		}
 
 		&_links {
@@ -51,6 +52,17 @@ footer {
 
 		&_link:hover {
 			opacity: 0.5;
+		}
+
+		&_list {
+			flex: 0.3;
+			flex-grow: 1;
+
+			&:nth-of-type(4) {
+				flex-shrink: 1;
+				flex-grow: 0;
+				min-width: 14em;
+			}
 		}
 
 		&_list + .footerMenu_list {
@@ -127,11 +139,15 @@ footer {
 			.footerMenu_list:nth-of-type(5) {
 				margin-left: 0;
 			}
+
+			&_title {
+				pointer-events: all;
+			}
 		}
 
 		.footerInner {
 			width: auto;
-			padding: 74px 10% 45px;
+			padding: 74px 8% 45px;
 		}
 
 		.footerMenu_list + .footerMenu_list {
@@ -148,8 +164,10 @@ footer {
 			font-size: 10px;
 
 			&_link {
+				font-size: 12px;
+
 				& + .terms_link {
-					margin-left: 29px;
+					margin-left: 16px;
 				}
 				&::after {
 					content: none;
