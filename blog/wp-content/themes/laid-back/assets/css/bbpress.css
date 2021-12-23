@@ -1,0 +1,24 @@
+.page_contents {
+  padding-bottom: 32px; }
+
+.forum ul li,
+.forum ol li {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0; }
+
+.topic ul li,
+.topic ol li {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0; }
+.topic img.avatar {
+  border-radius: 8px; }
+
+.bbp-author-role {
+  margin: 0px 8px;
+  padding: 2px 0;
+  border: 1px solid #ddd;
+  background: #eee; }
+
+
