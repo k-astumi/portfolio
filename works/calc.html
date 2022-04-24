@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="keywords" content="電卓,JavaScript">
+ <meta name="description" content="電卓" />
+    <meta property="og:url" content="https://k-atsumi.opal.ne.jp/works/olivia.html" />
+ <meta property="og:type" content="article" />
+ <meta property="og:title" content="電卓の練習" />
+ <meta property="og:description" content="電卓" />
+ <meta property="og:site_name" content="Olivia" />
+ <meta property="og:image" content="https://k-atsumi.opal.ne.jp/works/images/olivia/ogp.jpg" />
+ <meta name="twitter:card" content="Summary Card" />
+<link rel="stylesheet" href="/css/destyle.css" type="text/css">
+<style>
+ .calc {
+     width: 200px;
+ }
+ .calc_row {
+     display: flex;
+ }
+ .calc_line {
+     background-color: #eee;
+		 line-height: 2.5;
+		 text-align: right;
+ }
+ .calc_button {
+     border: 1px solid #000;
+     width: 40px;
+     height: 40px;
+     text-align: center;
+ }
+</style>
+</head>
+<body>
+  <form name="myForm">
+		<div class="calc">
+			<div class="calc_row">
+				<p><input class="calc_line" size="13" type="text" name="myLine" value="0"></p>
+				<p><input class="calc_button" type="button" value="C" onclick="myC()"></p>
+			</div>
+			<div class="calc_row">
+				<p><input class="calc_button" type="button" value="7" onclick="myValue(7)"></p>
+				<p><input class="calc_button" type="button" value="8" onclick="myValue(8)"></p>
+				<p><input class="calc_button" type="button" value="9" onclick="myValue(9)"></p>
+				<p><input class="calc_button" type="button" value="÷" onclick="myCalculate('/')"></p>
+			</div>
+			<div class="calc_row">
+				<p><input class="calc_button" type="button" value="4" onclick="myValue(4)"></p>
+				<p><input class="calc_button" type="button" value="5" onclick="myValue(5)"></p>
+				<p><input class="calc_button" type="button" value="6" onclick="myValue(6)"></p>
+				<p><input class="calc_button" type="button" value="×" onclick="myCalculate('*')"></p>
+			</div>
+			<div class="calc_row">
+				<p><input class="calc_button" type="button" value="1" onclick="myValue(1)"></p>
+				<p><input class="calc_button" type="button" value="2" onclick="myValue(2)"></p>
+				<p><input class="calc_button" type="button" value="3" onclick="myValue(3)"></p>
+				<p><input class="calc_button" type="button" value="-" onclick="myCalculate('-')"></p>
+			</div>
+			<div class="calc_row">
+				<p><input class="calc_button" type="button" value="0" onclick="myValue(0)"></p>
+				<p><input class="calc_button" type="button" value="." onclick="myValue('.')"></p>
+				<p><input class="calc_button" type="button" value="+" onclick="myCalculate('+')"></p>
+				<p><input class="calc_button" type="button" value="=" onclick="myCalculate('=')"></p>
+			</div>
+		</div>
+  </form>
+  <script>
+		let myInput = '';
+		let myTotal = 0;
+		let myFlg = 1; //1回前に入力したのは０:数字 1:演算子
+		let myCalc = '+';
+
+		function myValue(myData) {
+			myFlg = 0; //１回前に押したのは数値
+			myInput += myData;
+			document.myForm.myLine.value = myInput;
+		}
+
+		function myCalculate(myData) {
+			if(myFlg === 0) {//１回前が数字だった時
+				myFlg = 1; // 演算子を押したので1
+				formula　= myTotal + myCalc + myInput;
+				myTotal = eval(formula);
+				myInput = '';
+				document.myForm.myLine.value = myTotal;
+			}
+
+			//演算子を保存
+			if(myData === '=') {
+
+			}else{
+				myCalc = myData;
+			}
+		}
+
+		function myC() {
+			myTotal = 0;
+			myInput = '';
+			myCalc = '+';
+			document.myForm.myLine.value = myTotal;
+		}
+	</script>
+</body>
+</html>
