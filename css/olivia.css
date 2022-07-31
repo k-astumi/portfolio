@@ -697,7 +697,7 @@ header .hamburger_line::after {
   font-size: 68px;
   font-family: "Gayathri", sans-serif;
   letter-spacing: 0.1em;
-  margin-right: 10vw;
+  margin-right: 10%;
 }
 .menuExpand .menu {
   flex-grow: 1;
