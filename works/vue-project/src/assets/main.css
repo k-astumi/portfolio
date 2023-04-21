@@ -1,0 +1,6 @@
+@import "./base.css";
+
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  letter-spacing: 0.1em;
+}
