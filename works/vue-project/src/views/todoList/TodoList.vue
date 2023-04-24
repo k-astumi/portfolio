@@ -1,7 +1,6 @@
 <template>
   <div>
-    <p>テストページ</p>
-    <router-link to="/">前のページ</router-link>
+    <p>ToDoリスト</p>
   </div>
 </template>
 <script setup lang="ts"></script>
