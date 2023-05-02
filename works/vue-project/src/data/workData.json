@@ -1,8 +1,8 @@
 [
     {
-    "image" : "https://placehold.jp/1200x700.png",
-    "title" : "TODOリストアプリ",
-    "description" : "説明１説明１説明１説明１説明１説明１説明１説明１",
+    "image" : "image_todo.png",
+    "title" : "TO DOリストアプリ",
+    "description" : "項目の追加と削除ができるシンプルなTO DOリストです。",
     "url" : "/todoList"
 },
 {
@@ -12,7 +12,7 @@
     "url" : "/test"
 },
 {
-    "image" : "https://placehold.jp/1200x400.png",
+    "image" : "https://placehold.jp/1200x700.png",
     "title" : "ブランドリスト",
     "description" : "説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３",
     "url" : "/test"
