@@ -1,0 +1,656 @@
+ [
+    {
+        "alphabet": "A",
+        "brand_id": 1,
+        "brand_name": "A.P.C",
+        "brand_name_kana": "アーペーセー"
+    },
+    {
+        "alphabet": "A",
+        "brand_id": 2,
+        "brand_name": "Acne Studios",
+        "brand_name_kana": "アクネストゥディオス"
+    },
+    {
+        "alphabet": "A",
+        "brand_id": 3,
+        "brand_name": "Agete",
+        "brand_name_kana": "アガット"
+    },
+    {
+        "alphabet": "A",
+        "brand_id": 4,
+        "brand_name": "Agnes b",
+        "brand_name_kana": "アニエスべー"
+    },
+    {
+        "alphabet": "A",
+        "brand_id": 5,
+        "brand_name": "asics",
+        "brand_name_kana": "アシックス"
+    },
+    {
+        "alphabet": "B",
+        "brand_id": 6,
+        "brand_name": "BALENCIAGA",
+        "brand_name_kana": "バレンシアガ"
+    },
+    {
+        "alphabet": "B",
+        "brand_id": 7,
+        "brand_name": "BALLY",
+        "brand_name_kana": "バリー"
+    },
+    {
+        "alphabet": "B",
+        "brand_id": 8,
+        "brand_name": "BALMAIN",
+        "brand_name_kana": "バルマン"
+    },
+    {
+        "alphabet": "B",
+        "brand_id": 9,
+        "brand_name": "BOTTEGA VENETA",
+        "brand_name_kana": "ボッテガヴェネタ"
+    },
+    {
+        "alphabet": "B",
+        "brand_id": 10,
+        "brand_name": "Burberry",
+        "brand_name_kana": "バーバリー"
+    },
+    {
+        "alphabet": "B",
+        "brand_id": 11,
+        "brand_name": "Bvlgari",
+        "brand_name_kana": "ブルガリ"
+    },
+    {
+        "alphabet": "C",
+        "brand_id": 12,
+        "brand_name": "CA4LA",
+        "brand_name_kana": "カシラ"
+    },
+    {
+        "alphabet": "C",
+        "brand_id": 13,
+        "brand_name": "Calvin Klein",
+        "brand_name_kana": "カルバンクライン"
+    },
+    {
+        "alphabet": "C",
+        "brand_id": 14,
+        "brand_name": "Cartier",
+        "brand_name_kana": "カルティエ"
+    },
+    {
+        "alphabet": "C",
+        "brand_id": 15,
+        "brand_name": "CASIO",
+        "brand_name_kana": "カシオ"
+    },
+    {
+        "alphabet": "C",
+        "brand_id": 16,
+        "brand_name": "CELINE",
+        "brand_name_kana": "セリーヌ"
+    },
+    {
+        "alphabet": "C",
+        "brand_id": 17,
+        "brand_name": "CHANEL",
+        "brand_name_kana": "シャネル"
+    },
+    {
+        "alphabet": "C",
+        "brand_id": 18,
+        "brand_name": "Chloe",
+        "brand_name_kana": "クロエ"
+    },
+    {
+        "alphabet": "C",
+        "brand_id": 19,
+        "brand_name": "Coach",
+        "brand_name_kana": "コーチ"
+    },
+    {
+        "alphabet": "D",
+        "brand_id": 20,
+        "brand_name": "Daniel Wellington",
+        "brand_name_kana": "ダニエルウェリントン"
+    },
+    {
+        "alphabet": "D",
+        "brand_id": 21,
+        "brand_name": "Dickies",
+        "brand_name_kana": "ディッキーズ"
+    },
+    {
+        "alphabet": "D",
+        "brand_id": 22,
+        "brand_name": "DIESEL",
+        "brand_name_kana": "ディーゼル"
+    },
+    {
+        "alphabet": "D",
+        "brand_id": 23,
+        "brand_name": "Dior",
+        "brand_name_kana": "ディオール"
+    },
+    {
+        "alphabet": "D",
+        "brand_id": 24,
+        "brand_name": "Dr.Martens",
+        "brand_name_kana": "ドクターマーチン"
+    },
+    {
+        "alphabet": "E",
+        "brand_id": 25,
+        "brand_name": "ECCO",
+        "brand_name_kana": "エコー"
+    },
+    {
+        "alphabet": "E",
+        "brand_id": 26,
+        "brand_name": "Emillio Pucci",
+        "brand_name_kana": "エミリオプッチ"
+    },
+    {
+        "alphabet": "E",
+        "brand_id": 27,
+        "brand_name": "EMPORIO ARMANI",
+        "brand_name_kana": "エンポリオアルマーニ"
+    },
+    {
+        "alphabet": "E",
+        "brand_id": 28,
+        "brand_name": "ESTEE LAUDER",
+        "brand_name_kana": "エスティーローダー"
+    },
+    {
+        "alphabet": "F",
+        "brand_id": 29,
+        "brand_name": "FABIO RUSCONI",
+        "brand_name_kana": "ファビオルスコーニ"
+    },
+    {
+        "alphabet": "F",
+        "brand_id": 30,
+        "brand_name": "FCMM",
+        "brand_name_kana": "エフシーエムエム"
+    },
+    {
+        "alphabet": "F",
+        "brand_id": 31,
+        "brand_name": "FENDI",
+        "brand_name_kana": "フェンディ"
+    },
+    {
+        "alphabet": "F",
+        "brand_id": 32,
+        "brand_name": "FERRAGAMO",
+        "brand_name_kana": "フェラガモ"
+    },
+    {
+        "alphabet": "F",
+        "brand_id": 33,
+        "brand_name": "FILA",
+        "brand_name_kana": "フィラ"
+    },
+    {
+        "alphabet": "G",
+        "brand_id": 34,
+        "brand_name": "gelato pique",
+        "brand_name_kana": "ジェラートピケ"
+    },
+    {
+        "alphabet": "G",
+        "brand_id": 35,
+        "brand_name": "GIORGIO ARMANI",
+        "brand_name_kana": "ジョルジオアルマーニ"
+    },
+    {
+        "alphabet": "G",
+        "brand_id": 36,
+        "brand_name": "GIVENCHY",
+        "brand_name_kana": "ジバンシィ"
+    },
+    {
+        "alphabet": "G",
+        "brand_id": 37,
+        "brand_name": "GUCCI",
+        "brand_name_kana": "グッチ"
+    },
+    {
+        "alphabet": "H",
+        "brand_id": 38,
+        "brand_name": "Hamilton",
+        "brand_name_kana": "ハミルトン"
+    },
+    {
+        "alphabet": "H",
+        "brand_id": 39,
+        "brand_name": "Harry Winston",
+        "brand_name_kana": "ハリー・ウィンストン"
+    },
+    {
+        "alphabet": "H",
+        "brand_id": 40,
+        "brand_name": "HAY",
+        "brand_name_kana": "ヘイ"
+    },
+    {
+        "alphabet": "H",
+        "brand_id": 41,
+        "brand_name": "HERMES",
+        "brand_name_kana": "エルメス"
+    },
+    {
+        "alphabet": "I",
+        "brand_id": 42,
+        "brand_name": "IL VISONTE",
+        "brand_name_kana": "イルビゾンテ"
+    },
+    {
+        "alphabet": "I",
+        "brand_id": 43,
+        "brand_name": "ISSEY MIYAKE",
+        "brand_name_kana": "イッセイミヤケ"
+    },
+    {
+        "alphabet": "J",
+        "brand_id": 44,
+        "brand_name": "J W ANDERSON",
+        "brand_name_kana": "ジェイダブリュ アンダーソン"
+    },
+    {
+        "alphabet": "J",
+        "brand_id": 45,
+        "brand_name": "Jil Sander",
+        "brand_name_kana": "ジルサンダー"
+    },
+    {
+        "alphabet": "J",
+        "brand_id": 46,
+        "brand_name": "JILLSTUART",
+        "brand_name_kana": "ジルスチュアート"
+    },
+    {
+        "alphabet": "J",
+        "brand_id": 47,
+        "brand_name": "Jimmy Choo",
+        "brand_name_kana": "ジミーチュウ"
+    },
+    {
+        "alphabet": "J",
+        "brand_id": 48,
+        "brand_name": "Jo Malone",
+        "brand_name_kana": "ジョーマローン"
+    },
+    {
+        "alphabet": "K",
+        "brand_id": 49,
+        "brand_name": "kate spade new york",
+        "brand_name_kana": "ケイトスペード"
+    },
+    {
+        "alphabet": "K",
+        "brand_id": 50,
+        "brand_name": "Keds",
+        "brand_name_kana": "ケッズ"
+    },
+    {
+        "alphabet": "K",
+        "brand_id": 51,
+        "brand_name": "KENZO",
+        "brand_name_kana": "ケンゾー"
+    },
+    {
+        "alphabet": "L",
+        "brand_id": 52,
+        "brand_name": "LACOSTE",
+        "brand_name_kana": "ラコステ"
+    },
+    {
+        "alphabet": "L",
+        "brand_id": 53,
+        "brand_name": "LANVIN",
+        "brand_name_kana": "ランバン"
+    },
+    {
+        "alphabet": "L",
+        "brand_id": 54,
+        "brand_name": "LOEWE",
+        "brand_name_kana": "ロエベ"
+    },
+    {
+        "alphabet": "L",
+        "brand_id": 55,
+        "brand_name": "Louis Vuitton",
+        "brand_name_kana": "ルイヴィトン"
+    },
+    {
+        "alphabet": "M",
+        "brand_id": 56,
+        "brand_name": "Mac",
+        "brand_name_kana": "マック"
+    },
+    {
+        "alphabet": "M",
+        "brand_id": 57,
+        "brand_name": "MAISON KITSUNE",
+        "brand_name_kana": "メゾンキツネ"
+    },
+    {
+        "alphabet": "M",
+        "brand_id": 58,
+        "brand_name": "Maison Margiela",
+        "brand_name_kana": "メゾンマルジェラ"
+    },
+    {
+        "alphabet": "M",
+        "brand_id": 59,
+        "brand_name": "Mame Kurogouchi",
+        "brand_name_kana": "マメ"
+    },
+    {
+        "alphabet": "M",
+        "brand_id": 60,
+        "brand_name": "MARC JACOBS",
+        "brand_name_kana": "マークジェイコブス"
+    },
+    {
+        "alphabet": "M",
+        "brand_id": 61,
+        "brand_name": "MARNI",
+        "brand_name_kana": "マルニ"
+    },
+    {
+        "alphabet": "N",
+        "brand_id": 62,
+        "brand_name": "Naked Wolfe",
+        "brand_name_kana": "ネイキッドウルフ"
+    },
+    {
+        "alphabet": "N",
+        "brand_id": 63,
+        "brand_name": "New Era",
+        "brand_name_kana": "ニューエラ"
+    },
+    {
+        "alphabet": "N",
+        "brand_id": 64,
+        "brand_name": "Nike",
+        "brand_name_kana": "ナイキ"
+    },
+    {
+        "alphabet": "O",
+        "brand_id": 65,
+        "brand_name": "OAKLEY",
+        "brand_name_kana": "オークリー"
+    },
+    {
+        "alphabet": "O",
+        "brand_id": 66,
+        "brand_name": "Off-White",
+        "brand_name_kana": "オフホワイト"
+    },
+    {
+        "alphabet": "O",
+        "brand_id": 67,
+        "brand_name": "OSOI",
+        "brand_name_kana": "オソイ"
+    },
+    {
+        "alphabet": "P",
+        "brand_id": 68,
+        "brand_name": "Patagonia",
+        "brand_name_kana": "パタゴニア"
+    },
+    {
+        "alphabet": "P",
+        "brand_id": 69,
+        "brand_name": "Paul Smith",
+        "brand_name_kana": "ポールスミス"
+    },
+    {
+        "alphabet": "P",
+        "brand_id": 70,
+        "brand_name": "PETIT BATEAU",
+        "brand_name_kana": "プチバトー"
+    },
+    {
+        "alphabet": "P",
+        "brand_id": 71,
+        "brand_name": "Philippe Audibert",
+        "brand_name_kana": "フィリップオーディベール"
+    },
+    {
+        "alphabet": "P",
+        "brand_id": 72,
+        "brand_name": "PRADA",
+        "brand_name_kana": "プラダ"
+    },
+    {
+        "alphabet": "Q",
+        "brand_id": 73,
+        "brand_name": "QASIMI",
+        "brand_name_kana": "カシミ"
+    },
+    {
+        "alphabet": "Q",
+        "brand_id": 74,
+        "brand_name": "QFORON",
+        "brand_name_kana": "キュフォロン"
+    },
+    {
+        "alphabet": "Q",
+        "brand_id": 75,
+        "brand_name": "QMILE",
+        "brand_name_kana": "キューマイル"
+    },
+    {
+        "alphabet": "R",
+        "brand_id": 76,
+        "brand_name": "Ralph Lauren",
+        "brand_name_kana": "ラルフローレン"
+    },
+    {
+        "alphabet": "R",
+        "brand_id": 77,
+        "brand_name": "Ray Ban",
+        "brand_name_kana": "レイバン"
+    },
+    {
+        "alphabet": "R",
+        "brand_id": 78,
+        "brand_name": "RED VALENTINO",
+        "brand_name_kana": "レッドヴァレンティノ"
+    },
+    {
+        "alphabet": "R",
+        "brand_id": 79,
+        "brand_name": "repetto",
+        "brand_name_kana": "レペット"
+    },
+    {
+        "alphabet": "R",
+        "brand_id": 80,
+        "brand_name": "RIMOWA",
+        "brand_name_kana": "リモワ"
+    },
+    {
+        "alphabet": "S",
+        "brand_id": 81,
+        "brand_name": "sacai",
+        "brand_name_kana": "サカイ"
+    },
+    {
+        "alphabet": "S",
+        "brand_id": 82,
+        "brand_name": "Saint Laurent",
+        "brand_name_kana": "サンローラン"
+    },
+    {
+        "alphabet": "S",
+        "brand_id": 83,
+        "brand_name": "See by Chloe",
+        "brand_name_kana": "シーバイクロエ"
+    },
+    {
+        "alphabet": "S",
+        "brand_id": 84,
+        "brand_name": "SELETTI",
+        "brand_name_kana": "セレッティ"
+    },
+    {
+        "alphabet": "S",
+        "brand_id": 85,
+        "brand_name": "Stella McCartney",
+        "brand_name_kana": "ステラマッカートニー"
+    },
+    {
+        "alphabet": "T",
+        "brand_id": 86,
+        "brand_name": "TED BAKER",
+        "brand_name_kana": "テッドベーカー"
+    },
+    {
+        "alphabet": "T",
+        "brand_id": 87,
+        "brand_name": "THE NORTH FACE",
+        "brand_name_kana": "ザノースフェイス"
+    },
+    {
+        "alphabet": "T",
+        "brand_id": 88,
+        "brand_name": "TOGA",
+        "brand_name_kana": "トーガ"
+    },
+    {
+        "alphabet": "T",
+        "brand_id": 89,
+        "brand_name": "TOM FORD",
+        "brand_name_kana": "トムフォード"
+    },
+    {
+        "alphabet": "U",
+        "brand_id": 90,
+        "brand_name": "UGG",
+        "brand_name_kana": "アグ"
+    },
+    {
+        "alphabet": "U",
+        "brand_id": 91,
+        "brand_name": "UNDERCOVER",
+        "brand_name_kana": "アンダーカバー"
+    },
+    {
+        "alphabet": "U",
+        "brand_id": 92,
+        "brand_name": "UN3D.",
+        "brand_name_kana": "アンスリード"
+    },
+    {
+        "alphabet": "V",
+        "brand_id": 93,
+        "brand_name": "VALENTINO",
+        "brand_name_kana": "ヴァレンティノ"
+    },
+    {
+        "alphabet": "V",
+        "brand_id": 94,
+        "brand_name": "Van Cleef & Arpels",
+        "brand_name_kana": "ヴァンクリーフアンドアーペル"
+    },
+    {
+        "alphabet": "V",
+        "brand_id": 95,
+        "brand_name": "VERSACE",
+        "brand_name_kana": "ヴェルサーチェ"
+    },
+    {
+        "alphabet": "V",
+        "brand_id": 96,
+        "brand_name": "VETEMENTS",
+        "brand_name_kana": "ヴェトモン"
+    },
+    {
+        "alphabet": "V",
+        "brand_id": 97,
+        "brand_name": "Vivienne Westwood",
+        "brand_name_kana": "ヴィヴィアンウエストウッド"
+    },
+    {
+        "alphabet": "W",
+        "brand_id": 98,
+        "brand_name": "west elm",
+        "brand_name_kana": "ウエストエルム"
+    },
+    {
+        "alphabet": "W",
+        "brand_id": 99,
+        "brand_name": "wiggle wiggle",
+        "brand_name_kana": "ウィグルウィグル"
+    },
+    {
+        "alphabet": "W",
+        "brand_id": 100,
+        "brand_name": "WKNDRS",
+        "brand_name_kana": "ウィークエンダーズ"
+    },
+    {
+        "alphabet": "X",
+        "brand_id": 101,
+        "brand_name": "X-girl",
+        "brand_name_kana": "エックスガール"
+    },
+    {
+        "alphabet": "X",
+        "brand_id": 102,
+        "brand_name": "X-large",
+        "brand_name_kana": "エクストララージ"
+    },
+    {
+        "alphabet": "Y",
+        "brand_id": 103,
+        "brand_name": "Y-3",
+        "brand_name_kana": "ワイスリー"
+    },
+    {
+        "alphabet": "Y",
+        "brand_id": 104,
+        "brand_name": "Yohji Yamamoto",
+        "brand_name_kana": "ヨウジヤマモト"
+    },
+    {
+        "alphabet": "Z",
+        "brand_id": 105,
+        "brand_name": "ZARA",
+        "brand_name_kana": "ザラ"
+    },
+    {
+        "alphabet": "Z",
+        "brand_id": 106,
+        "brand_name": "ZANONE",
+        "brand_name_kana": "ザノーネ"
+    },
+    {
+        "alphabet": "Z",
+        "brand_id": 107,
+        "brand_name": "ZARIO",
+        "brand_name_kana": "ザリオ"
+    },
+    {
+        "alphabet": "Z",
+        "brand_id": 108,
+        "brand_name": "ZERO NEWYORK",
+        "brand_name_kana": "ゼロニューヨーク"
+    },
+    {
+        "alphabet": "Z",
+        "brand_id": 109,
+        "brand_name": "Zoff",
+        "brand_name_kana": "ゾフ"
+    }
+]

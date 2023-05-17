@@ -12,9 +12,9 @@
     "url" : "/test"
 },
 {
-    "image" : "https://placehold.jp/1200x700.png",
+    "image" : "image_brand.png",
     "title" : "ブランドリスト",
-    "description" : "説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３説明３",
-    "url" : "/test"
+    "description" : "アルファベットで絞り込み検索、テキストボックスでリアルタイム検索ができるブランドリストです。",
+    "url" : "/brand"
 }
 ]
