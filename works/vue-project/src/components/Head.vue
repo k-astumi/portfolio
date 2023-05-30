@@ -12,7 +12,7 @@
     #3fba84 99% 100%
   );
   text-align: center;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +39,6 @@
 }
 @media (min-width: 800px) {
   .main-visual {
-    height: 100vh;
     .title {
       font-size: 70px;
       &::before {

@@ -6,15 +6,15 @@
     "url" : "/todoList"
 },
 {
-    "image" : "https://placehold.jp/1200x600.png",
-    "title" : "アンケートフォーム",
-    "description" : "説明２説明２説明２説明２説明２説明２説明２説明２",
-    "url" : "/test"
-},
-{
     "image" : "image_brand.png",
     "title" : "ブランドリスト",
     "description" : "アルファベットで絞り込み検索、テキストボックスでリアルタイム検索ができるブランドリストです。",
     "url" : "/brand"
+},
+{
+    "image" : "image_interview-sheet.png",
+    "title" : "フォーム入力",
+    "description" : "架空のweb問診票のフォーム入力画面です。リアルタイムで入力した結果を表示し、入力されていない項目があるとエラー表示が出ます。",
+    "url" : "/form"
 }
 ]

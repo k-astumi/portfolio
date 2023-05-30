@@ -3,6 +3,7 @@ import HomeView from "../views/home/Home.vue";
 import TestView from "../views/test/Test.vue";
 import TodoList from "../views/todoList/TodoList.vue";
 import Brand from "../views/brand/Brand.vue";
+import Form from "../views/form/Form.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -34,6 +35,11 @@ const router = createRouter({
       path: "/brand",
       name: "brand",
       component: Brand,
+    },
+    {
+      path: "/form",
+      name: "form",
+      component: Form,
     },
   ],
 });
