@@ -12,6 +12,7 @@ import FooterComponent from "@/components/Footer.vue";
 </script>
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200&display=swap");
+@import "@/scss/main.scss";
 .wrapper {
   display: flex;
   flex-direction: column;

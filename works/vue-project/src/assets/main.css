@@ -1,2 +1,6 @@
 @import "./base.css";
 @import "./destyle.css";
+
+.is-locked {
+overflow: hidden;
+}

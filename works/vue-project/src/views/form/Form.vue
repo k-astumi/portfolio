@@ -1,4 +1,14 @@
 <template>
+  <div
+    class="info-button"
+    @click="
+      openModal();
+      showContent = true;
+    "
+  >
+    <img src="/icon_info_gray.svg" alt="" />
+    <p class="info-button__text">このページの情報</p>
+  </div>
   <div class="container">
     <h1>Web問診票</h1>
     <FormInfoComponent
@@ -48,11 +58,24 @@
       送信
     </button>
   </div>
+  <ModalInfoComponent
+    v-if="showContent"
+    @close="
+      closeModal();
+      showContent = false;
+    "
+    >こちらのページはTO
+    DOリストアプリと同じく、ChatGPTにVue.jsでwebページを作るならどんなものが良いか、アイデアを聞いて実際に作ったページです。<br />
+    フォーム入力部分は子コンポーネントに分けて、子コンポーネントに入力されたデータはemitで親コンポーネントに渡し、リアルタイムで入力情報確認ができるようになっています。<br />
+    「診察券はお持ちですか？」の部分ではv-modelを使ってチェックボックスの値によって表示されるフォームの切り替えも行なっています。<br />
+    また、ウォッチャーを使用してデータが更新されるたびにバリデーションをおこない、入力されていない項目が存在する場合はリアルタイムにエラーが出て、送信ボタンが非活性になるようにしました。
+  </ModalInfoComponent>
 </template>
 <script setup lang="ts">
 import { ref, watch } from "vue";
 import FormInfoComponent from "@/views/form/FormInfo.vue";
 import FormSymptomsComponent from "@/views/form/FormSymptoms.vue";
+import ModalInfoComponent from "@/components/ModalInfo.vue";
 const stepNumber = ref(1);
 const form = ref({
   patientType: "",
@@ -95,6 +118,14 @@ watch(form.value, () => {
     }
   }
 });
+//モーダル
+const showContent = ref(false);
+const openModal = () => {
+  document.body.classList.add("is-locked");
+};
+const closeModal = () => {
+  document.body.classList.remove("is-locked");
+};
 </script>
 <style lang="scss" scoped>
 .container {
@@ -111,7 +142,6 @@ watch(form.value, () => {
       font-size: 22px;
     }
     &__title {
-      //margin-top: 16px;
       line-height: 1;
       padding: 16px 0;
     }

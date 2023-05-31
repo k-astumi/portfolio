@@ -1,5 +1,15 @@
 <template>
   <div class="todo">
+    <div
+      class="info-button"
+      @click="
+        openModal();
+        showContent = true;
+      "
+    >
+      <img src="/icon_info_gray.svg" alt="" />
+      <p class="info-button__text">このページの情報</p>
+    </div>
     <div class="todo__inner">
       <div class="input-box">
         <input
@@ -23,9 +33,19 @@
       </ul>
     </div>
   </div>
+  <ModalInfoComponent
+    v-if="showContent"
+    @close="
+      closeModal();
+      showContent = false;
+    "
+    >こちらのページはChatGPTにVue.jsでwebページを作るならどんなものが良いか、アイデアを聞いて実際に作ったページです。<br />
+    v-model、v-if、v-forなどVue.jsの基礎を網羅しています。
+  </ModalInfoComponent>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
+import ModalInfoComponent from "@/components/ModalInfo.vue";
 const list = ref(["check mail", "call mom", "buy milk"]);
 const todoText = ref("");
 const addTodo = () => {
@@ -36,6 +56,14 @@ const addTodo = () => {
 };
 const removeTodo = (index: any) => {
   list.value.splice(index, 1);
+};
+//モーダル
+const showContent = ref(false);
+const openModal = () => {
+  document.body.classList.add("is-locked");
+};
+const closeModal = () => {
+  document.body.classList.remove("is-locked");
 };
 </script>
 <style lang="scss" scoped>
