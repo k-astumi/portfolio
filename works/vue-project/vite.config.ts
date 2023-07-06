@@ -11,7 +11,7 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  base: "/works/vue-project",
+  base: process.env.NODE_ENV === "production" ? "/" : "/works/vue-project",
   css: {
     preprocessorOptions: {
       scss: {

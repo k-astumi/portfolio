@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "Olivia",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/olivia.html"
+      }
+    ]
+  }
+}

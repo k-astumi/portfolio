@@ -80,7 +80,7 @@ const result: any = ref([]);
 const onInput = () => {
   result.value = [];
   for (let data of brandList) {
-    if (data.brand_name.match(searchWord.value)) {
+    if (data.brand_name.toLowerCase().match(searchWord.value.toLowerCase())) {
       result.value.push(data);
     } else if (data.brand_name_kana.match(searchWord.value)) {
       result.value.push(data);

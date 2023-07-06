@@ -6,7 +6,9 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "ignoreDeprecations": "5.0"
+    "ignoreDeprecations": "5.0",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
 
   "references": [

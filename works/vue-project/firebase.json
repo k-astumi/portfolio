@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist",
+    "site": "portfolio-vue-project",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

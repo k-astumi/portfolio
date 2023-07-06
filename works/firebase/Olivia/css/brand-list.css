@@ -1,0 +1,73 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Regular", "Yu Gothic", Verdana, Meiryo, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.wrap {
+  width: 322px;
+  margin: 0 auto;
+  padding: 44px 0;
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.c-search-form {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.c-search-form-content {
+  font-size: 16px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.c-search-form-content__input--gray {
+  width: 100%;
+  line-height: 36px;
+  box-sizing: border-box;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+.c-search-form__clear--gray {
+  display: none;
+}
+
+.c-search-form[data-input=true] .c-search-form__clear--gray {
+  display: flex;
+}
+
+.p-brandsearch-keypad table {
+  margin: 28px auto;
+}
+
+.p-brandsearch-keypad-button {
+  padding-bottom: 4px;
+}
+
+.p-brandsearch-keypad-button:not(:nth-of-type(6n)) {
+  padding-right: 4px;
+}
+
+.p-brandsearch-keypad-button__anchor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3em;
+  height: 3em;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  text-align: center;
+}
+.p-brandsearch-keypad-button__anchor.active {
+  border-color: #4bddaa;
+  color: #4bddaa;
+}
+
+.p-brandsearch-keypad-button.link_OTHER a {
+  width: auto;
+}
